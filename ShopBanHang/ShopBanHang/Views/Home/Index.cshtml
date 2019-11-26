@@ -8,26 +8,21 @@
     ShopBanHang.Repository.ProductDAO proDAO = new ShopBanHang.Repository.ProductDAO();
     ShopBanHang.Models.UserContext db = new ShopBanHang.Models.UserContext();
 }
-<div data-vide-bg="video/video" style="position: relative;">
+<div data-vide-bg="video/video" style="position: relative;width:auto;height:500px">
+    <div class="container">
+        <div class="banner-info">
+ 
+        </div>
+    </div>
     <div style="position: absolute; z-index: -1; top: 0px; left: 0px; bottom: 0px; right: 0px; overflow: hidden; background-size: cover;
         background-repeat: no-repeat; background-position: 50% 50%; background-image: none;">
         <video autoplay="autoplay" loop="loop" muted="" style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%);
              visibility: visible; width: 1024px; height: auto;">
             <source src="~/video/video.mp4" type="video/mp4">
-            <source src="~/video/video.gif" type="image/gif" />
+           
         </video>
     </div>
-    <div class="container">
-        <div class="banner-info">
-            <div class="search-form">
-                @using (Ajax.BeginForm("SearchByName", "Products", new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "Get" }))
-                {
-                    <input type="text" style="background-color:rgba(0, 0, 255, 0.50);" placeholder="Tìm kiếm..." name="name">
-                    <button type="submit" class="btn btn-default" style="background-color:rgba(0, 0, 255, 0.50);"><i class=" fa fa-search"></i></button>
-                }
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 <div class="content-top ">
@@ -136,11 +131,7 @@
                 </div>
             </div>
         </div>
-        <!--image khuyến mãi-->
-        <div>
-            <img src="~/Image/khuyen-mai.jpg" class="center-block" />
-        </div>
-        <!--End Image khuyến mãi-->
+        
         <div class="spec " style="margin-top:30px;">
             <h3><a href="@Url.Action("ProductsBestDiscount", "Products", new { title="Sản phẩm giảm giá cao nhất", page=1 })" style="text-decoration:none;">Sản phẩm giảm giá cao nhất</a></h3>
             <div class="ser-t">
@@ -259,10 +250,10 @@
                         <p><strong>Gọi ngay cho chúng tôi khi bạn có thắc mắc</strong></p>
                         <ul style="font-size:xx-large;">
                             <li class="fa fa-check-circle">
-                                <strong class="big npl">01212692802 </strong>
+                                <strong class="big npl">0825674486 </strong>
                             </li>
                             <li class="fa fa-check-circle">
-                                <strong class="big npl">01212692802 </strong>
+                                <strong class="big npl">0584725181 </strong>
                             </li>
                         </ul>
                     </div>

@@ -72,13 +72,20 @@
     <div class="header">
         <div class="container">
             <div class="logo">
-                <h1><a href="@Url.Action("Index", "Home")"><b>L<br>B<br>T</b>Shopper<span>The Best Of Gaming</span></a></h1>
+                <h1><a href="@Url.Action("Index", "Home")"><b>L<br>B<br>T</b>Shop<span>The Best Of Gaming</span></a></h1>
             </div>
             <div class="head-t">
-                <ul class="card">
+                <div class="search-form">
+                    @using (Ajax.BeginForm("SearchByName", "Products", new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "Get" }))
+                    {
+                        <input type="text" style="background-color:rgba(255, 0, 23, 0.75);" placeholder="Tìm kiếm..." name="name">
+                        <button type="submit" class="btn btn-default" style="background-color:rgba(255, 0, 23, 0.75);"><i class=" fa fa-search"></i></button>
+                    }
+                </div>
+                @*<ul class="card">
                     <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng nhập</a></li>
                     <li><a href="register.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng ký</a></li>
-                </ul>
+                </ul>*@
             </div>
             <div class="header-ri">
                 <ul class="social-top">
@@ -189,7 +196,7 @@
             </div>
             <div class="clearfix"></div>
             <div class="footer-bottom">
-                <h2><a href="index.html"><b>L<br>B<br>T</b>Shopper<span>The Best Of Gaming</span></a></h2>
+                <h2><a href="index.html"><b>L<br>B<br>T</b>Shop<span>The Best Of Gaming</span></a></h2>
                 <ul class="social-fo">
                     <li><a href="https://www.facebook.com/profile.php?id=100010739107633" target="_blank" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
